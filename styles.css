@@ -1,0 +1,146 @@
+body {
+    font-family: 'Cascadia Code', monospace;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #D6E6F2; /* Azul mais claro e esbatido */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.logo {
+    max-width: 450px; /* Aumentando o tamanho do logo */
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px; /* Espaço adicional abaixo do logo */
+}
+
+.report-title {
+    margin-top: 20px; /* Espaço adicional acima dos títulos */
+}
+
+.report-title h1, .report-title div {
+    color: black;
+}
+
+.report-title h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaço entre as colunas */
+}
+
+/* Ajustando o layout para duas colunas */
+.field {
+    margin-bottom: 20px; /* Espaçamento maior entre os campos */
+    flex: 1 1 calc(50% - 20px); /* Cada campo ocupa metade da largura disponível */
+    min-width: 300px; /* Largura mínima para campos menores */
+    display: flex;
+    flex-direction: column; /* Alinhando os elementos verticalmente */
+}
+
+.label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left; /* Alinhando o texto à esquerda */
+}
+
+.value input, .value select {
+    width: 100%;
+    padding: 12px; /* Aumentando o padding para mais conforto */
+    border: 1px solid #aaa; /* Cor de borda mais suave */
+    border-radius: 8px; /* Bordas mais arredondadas */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra interna mais visível */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Animação ao focar */
+}
+
+/* Ajustando a largura da caixa de texto dos EPC para ser igual às de Plant Location e GPS */
+.value select {
+    width: calc(100% - 20px); /* Garantindo a mesma largura das outras caixas de texto */
+}
+
+/* Ajustando a caixa de texto do EPC Sub-Contractor */
+.value select {
+    text-align: left; /* Alinhando o texto à esquerda */
+    width: 100%; /* Garantindo a mesma largura das outras caixas de texto */
+}
+
+.value input:focus, .value select:focus {
+    border-color: #4CAF50; /* Cor de foco consistente com os botões */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Destaque ao focar */
+}
+
+button {
+    background-color: #007BFF; /* Cor consistente com o tema */
+    color: white;
+    border: none;
+    padding: 12px 24px; /* Botões maiores e mais confortáveis */
+    border-radius: 8px; /* Bordas mais arredondadas */
+    cursor: pointer;
+    font-size: 16px; /* Texto maior nos botões */
+    transition: background-color 0.3s, transform 0.2s; /* Animação ao interagir */
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+button:active {
+    transform: scale(0.95); /* Leve redução ao clicar */
+}
+
+/* Adicionando estilos para os ícones nos botões */
+button .icon {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    vertical-align: middle; /* Alinhando o ícone ao texto */
+    width: 16px; /* Tamanho do ícone */
+    height: 16px; /* Tamanho do ícone */
+}
+
+#addRepresentativeModal, #addEpcModal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: auto;
+}
+
+#modalOverlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Ajustes para compatibilidade com Bootstrap v5 */
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Ajustando o botão Add EPC para ficar abaixo do campo EPC Sub-Contractor */
+.field button {
+    margin-top: 10px; /* Espaço acima do botão */
+    align-self: center; /* Centralizando o botão */
+}
